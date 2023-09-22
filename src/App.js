@@ -1,7 +1,12 @@
 import "./App.css";
+import Body from "./components/Body";
 
 function App() {
-  return <div className="text-3xl bg-green-300">Namastee GPT react</div>;
+  return (
+    <div>
+      <Body />
+    </div>
+  );
 }
 
 export default App;
