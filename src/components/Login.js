@@ -10,9 +10,9 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/slices/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
@@ -39,8 +39,7 @@ const Login = () => {
           const user = userCredential.user;
           updateProfile(user, {
             displayName: userName.current.value,
-            photoURL:
-              "https://media.licdn.com/dms/image/C4D03AQEnKX4v8cVUXg/profile-displayphoto-shrink_400_400/0/1614689290503?e=1702512000&v=beta&t=aK2AKZ1AuMResh53cU4cVKpOJ9acwwZmaov3BdRiBYA",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -52,7 +51,6 @@ const Login = () => {
                   photoURL: photoURL,
                 }),
               );
-              navigate("/browse");
             })
             .catch((error) => {
               setErrorMessage(error);
@@ -74,8 +72,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed ins
           const user = userCredential.user;
-          navigate("/browse");
-          // ...
         })
         .catch((error) => {
           const errorCode = error.code;
