@@ -26,6 +26,14 @@
 -update store with trailer video data
 -embedded the video and ake it autoplay
 -mainContainer done✅
+-Secondary container built
+-MOvieList
+-Moviecard
+-POpularMovies customhook
+-GPT Search API
+-GPT Search PAge
+-GPT search Bar
+-multi language feature in App
 
 # Features
 
