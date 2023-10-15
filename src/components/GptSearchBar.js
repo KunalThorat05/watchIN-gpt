@@ -38,7 +38,6 @@ const GptSearchBar = () => {
     }
     //spiderman,ironman,superman,krish,interstellar
     const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
-    console.log(gptMovies);
 
     //forEach Movie i will search TMDB API
 
