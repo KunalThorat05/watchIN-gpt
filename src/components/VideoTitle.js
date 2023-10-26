@@ -1,5 +1,5 @@
 import React from "react";
-import { PlayIcon } from "@heroicons/react/24/solid";
+// import { PlayIcon } from "@heroicons/react/24/solid";
 
 const VideoTitle = ({ title, overview }) => {
   return (
@@ -8,7 +8,7 @@ const VideoTitle = ({ title, overview }) => {
       <p className="py-6 text-lg w-1/4">{`${overview.substr(0, 150)}...`}</p>
       <div className="flex">
         <button className="flex items-center bg-white text-black p-2 px-10 text-xl hover:bg-opacity-75 rounded-lg">
-          <PlayIcon className=" h-4 w-4 mx-2" /> Play
+          {/* <PlayIcon className=" h-4 w-4 mx-2" /> Play */} Play
         </button>
         <button className="mx-2 bg-gray-500 text-white p-2 px-10 text-xl bg-opacity-50 rounded-lg">
           More Info
